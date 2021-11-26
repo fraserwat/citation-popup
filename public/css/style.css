@@ -1,0 +1,122 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html, body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root, #__next {
+  isolation: isolate;
+}
+
+#app {
+  font-family: 'PT Serif', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto;
+  color: #2c3e50;
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.citation {
+  position: relative;
+  color: white;
+  background-color: #C33149;
+  border-radius: 999px;
+  padding: 0 .33rem;
+  cursor: pointer;
+}
+
+.citation > span {
+  display: none;
+}
+
+.citation:active > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #C33149;
+  border-radius: .75rem;
+  font-size: 1rem;
+  width: clamp(1px, 70vw, 500px);
+  bottom: 2rem;
+  left: 100%;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.citation:active > span::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: #C33149 solid 2px;
+  bottom: -1.5rem;
+  z-index: 3;
+}
+/*# sourceMappingURL=style.css.map */

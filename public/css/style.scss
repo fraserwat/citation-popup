@@ -1,0 +1,54 @@
+@import "reset";
+
+#app {
+  font-family: 'PT Serif', serif;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto;
+  color: #2c3e50;
+  padding: 1.5rem;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+p {
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+.citation {
+  position: relative;
+  color: white;
+  background-color: #C33149;
+  border-radius: 999px;
+  padding: 0 .33rem;
+  cursor: pointer;
+}
+.citation > span {
+    display: none;
+}
+.citation:active > span {
+    display: flex;
+    position: absolute;
+    color: #2c3e50;
+    background-color: rgba($color: #fff, $alpha: 0.95);
+    border: 2px solid #C33149;
+    border-radius: .75rem;
+    font-size: 1rem;
+    width: clamp(1px, 70vw, 500px);
+    bottom: 2rem;
+    left: 100%;
+    padding: 1.5rem;
+    z-index: 2;
+}
+.citation:active > span::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: #C33149 solid 2px;
+    bottom: -1.5rem;
+    z-index: 3;
+}
